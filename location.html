@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오시는 길 | 성운목재합판</title>
+  <link rel="icon" href="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>오시는 길</h1>
+        <p>경기도 안산시 상록구 용신로 199, 1층 (사동 1551-2)</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!--
+          지도: API 키 없이 바로 보이는 임베드입니다.
+          카카오맵으로 바꾸려면 map.kakao.com 에서 위치 검색 → 공유 → "지도 퍼가기"로 받은 HTML을
+          이 iframe 대신 붙여 넣으세요.
+        -->
+        <iframe class="map-frame" title="성운목재합판 위치 지도" loading="lazy"
+          src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%82%B0%EC%8B%9C%20%EC%83%81%EB%A1%9D%EA%B5%AC%20%EC%9A%A9%EC%8B%A0%EB%A1%9C%20199&z=17&output=embed"></iframe>
+
+        <div class="btn-row" style="margin:20px 0 40px">
+          <a class="btn btn-primary" data-map="naver" href="#" target="_blank" rel="noopener">네이버지도로 길찾기</a>
+          <a class="btn btn-primary" data-map="kakao" href="#" target="_blank" rel="noopener">카카오맵으로 길찾기</a>
+        </div>
+
+        <div class="grid grid-2">
+          <ul class="info-list">
+            <li><span>주소</span><span data-site="address"></span></li>
+            <li><span>전화</span><span><a data-site-tel href="#" data-site="phone"></a></span></li>
+            <li><span>팩스</span><span data-site="fax"></span></li>
+            <li><span>이메일</span><span><a data-site="email" data-site-mail href="#"></a></span></li>
+            <li><span>영업시간</span><span data-site="hours"></span></li>
+          </ul>
+          <div class="account-box">
+            <div>
+              <div class="muted">입금 계좌</div>
+              <div class="num"><span data-site="account.bank"></span> <span data-site="account.number"></span></div>
+              <div>예금주 <span data-site="account.holder"></span></div>
+            </div>
+            <button class="btn btn-primary" type="button" data-copy="account.number">계좌번호 복사</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <a class="btn btn-primary mobile-call" data-site-tel href="#">📞 전화 문의</a>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
