@@ -40,19 +40,19 @@ powershell -ExecutionPolicy Bypass -File serve.ps1
 
 - `email`: 이메일 주소
 - `hours`: 영업시간 (예: `"평일 08:00~18:00 / 토 08:00~13:00 / 일·공휴일 휴무"`)
-- `formEndpoint`: 문의 폼 주소 (아래 참고)
+- `formKey`: 문의 폼 Access Key (아래 참고)
 
 빈 값은 화면에 "추후 안내"로 나옵니다.
 
-## 문의 폼 연결 (Formspree, 무료)
+## 문의 폼 연결 (Web3Forms, 무료)
 
 GitHub Pages에는 서버가 없어서 메일 발송은 외부 서비스를 씁니다.
 
-1. https://formspree.io 가입 → New Form → 받을 이메일 입력
-2. 발급된 주소(`https://formspree.io/f/xxxxxxx`)를 `config.js`의 `formEndpoint`에 붙여넣기
-3. 처음 한 번 테스트 전송하면 Formspree가 확인 메일을 보냅니다. 확인하면 이후부터 메일로 문의가 옵니다.
+1. https://web3forms.com 에서 받을 이메일을 입력하고 Create Access Key
+2. 그 메일로 온 Access Key를 `config.js`의 `formKey`에 붙여넣기
+3. 이후 문의는 그 메일로 들어옵니다. 받는 메일을 바꾸려면 새 메일로 키를 다시 받으면 됩니다.
 
-무료 플랜은 월 50건까지입니다.
+무료 플랜은 월 250건까지입니다.
 
 ## 공지 글 쓰기
 

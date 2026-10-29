@@ -28,7 +28,7 @@ window.SITE = {
     instagram: ""
   },
 
-  // 문의 폼 전송 주소 (FormSubmit, 가입 불필요). 맨 처음 1회 전송 시 아래 메일로 "Confirm" 메일이 오고,
-  // 그 메일의 버튼을 눌러야 이후 문의가 들어옵니다. 비어 있으면 폼 대신 전화 안내가 나옵니다.
-  formEndpoint: "https://formsubmit.co/ajax/swwood4848@naver.com"
+  // 문의 폼 Access Key (Web3Forms, 가입 불필요). web3forms.com에 받을 메일을 넣으면 그 메일로 키가 옵니다.
+  // 키가 연결된 메일로 문의가 들어옵니다. 비어 있으면 폼 대신 전화 안내가 나옵니다.
+  formKey: ""
 };
