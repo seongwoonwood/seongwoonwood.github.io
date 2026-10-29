@@ -30,5 +30,5 @@ window.SITE = {
 
   // 문의 폼 Access Key (Web3Forms, 가입 불필요). web3forms.com에 받을 메일을 넣으면 그 메일로 키가 옵니다.
   // 키가 연결된 메일로 문의가 들어옵니다. 비어 있으면 폼 대신 전화 안내가 나옵니다.
-  formKey: ""
+  formKey: "538724d3-530f-4355-91d1-378c9196eaf5"
 };
