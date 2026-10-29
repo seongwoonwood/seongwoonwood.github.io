@@ -1,5 +1,5 @@
 /*
- * 문의 폼 전송. config.js의 formEndpoint(Formspree 주소)로 보냅니다.
+ * 문의 폼 전송. config.js의 formEndpoint(FormSubmit 주소)로 보냅니다.
  * 주소가 비어 있으면 전송하지 않고 전화 안내를 보여줍니다.
  */
 (function () {
@@ -23,21 +23,29 @@
       return;
     }
 
+    const data = new FormData(form);
+    data.delete("agree");
+    data.append("_subject", `[홈페이지 문의] ${data.get("type")} - ${data.get("name")}`);
+    data.append("_template", "table");
+
     const btn = form.querySelector("button[type=submit]");
     btn.disabled = true;
+    btn.textContent = "보내는 중…";
     try {
       const res = await fetch(S.formEndpoint, {
         method: "POST",
-        body: new FormData(form),
+        body: data,
         headers: { Accept: "application/json" }
       });
-      if (!res.ok) throw new Error(res.status);
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || String(json.success) !== "true") throw new Error(json.message || res.status);
       form.reset();
       show("문의가 접수되었습니다. 확인 후 연락드리겠습니다.");
     } catch (err) {
       show(`전송에 실패했습니다. 전화 <a href="tel:${S.phone}">${S.phone}</a>로 연락해 주세요.`);
     } finally {
       btn.disabled = false;
+      btn.textContent = "문의 보내기";
     }
   });
 })();

@@ -28,7 +28,7 @@ window.SITE = {
     instagram: ""
   },
 
-  // 문의 폼 전송 주소. https://formspree.io 에서 무료 폼을 만들고 받은 주소를 넣으세요.
-  // 예: "https://formspree.io/f/abcdwxyz"  — 비어 있으면 폼 대신 전화 안내가 나옵니다.
-  formEndpoint: ""
+  // 문의 폼 전송 주소 (FormSubmit, 가입 불필요). 맨 처음 1회 전송 시 아래 메일로 "Confirm" 메일이 오고,
+  // 그 메일의 버튼을 눌러야 이후 문의가 들어옵니다. 비어 있으면 폼 대신 전화 안내가 나옵니다.
+  formEndpoint: "https://formsubmit.co/ajax/swwood4848@naver.com"
 };
