@@ -82,6 +82,7 @@
     el.innerHTML = `
       <div class="container footer-inner">
         <div>
+          <img class="footer-logo" src="assets/img/logo.png" alt="${S.name} 로고">
           <strong class="footer-name">${S.name}</strong>
           <p>${S.address} ${S.addressNote}</p>
           <p>대표 ${S.owner} · 전화 <a href="tel:${S.phone}">${S.phone}</a> · 팩스 ${S.fax}</p>

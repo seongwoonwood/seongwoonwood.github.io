@@ -69,7 +69,7 @@ GitHub 웹사이트에서 바로 할 수도 있습니다. 저장소 → `posts` 
 
 ## 사진 바꾸기
 
-- 로고: `assets/img/logo.svg`는 명함 로고를 단순하게 다시 그린 임시 파일입니다. 원본 로고 파일(SVG/PNG)이 있으면 교체하세요. PNG라면 `style.css`의 `.logo-mark`와 각 html의 `<link rel="icon">` 경로도 바꿔야 합니다.
+- 로고: `assets/img/logo.png`(마크만), `logo-full.png`(마크+상호)는 명함 이미지에서 잘라낸 것입니다. 디자인 원본 파일(AI/SVG/고해상도 PNG)이 있으면 같은 이름으로 덮어쓰면 화질이 좋아집니다.
 - 메인 배경: `assets/img/hero.svg` → 매장 사진(예: `hero.jpg`)으로 바꾸고 `style.css`의 `.hero` 경로를 수정하세요.
 - 품목·갤러리: 같은 방법으로 `assets/img`에 넣고 html의 `src` / `href`를 바꿉니다. 사진은 가로 1600px 이하로 줄여서 올리면 빨리 뜹니다.
 
